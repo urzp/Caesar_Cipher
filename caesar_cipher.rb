@@ -7,7 +7,7 @@ cesar_key=gets.chomp.to_i
 letters=text.split("")  # заливаем arr символами
 
 
-letters.map do |text_char| 
+letters.map! do |text_char| 
 	
 	if text_char.between?("a","z") 
 	
