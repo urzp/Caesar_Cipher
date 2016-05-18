@@ -7,9 +7,36 @@ cesar_key=gets.chomp.to_i
 letters=text.split("")  # заливаем arr символами
 
 
-letters.each do |c| 
+letters.map do |text_char| 
 	
-#puts c if c.ord.between?(97,122)
-puts c if c.ord.between?(65,90)
+	if text_char.between?("a","z") 
+	
+		if (text_char.ord+cesar_key).chr > "z"
+			
+			(text_char.ord+cesar_key-"z".ord+("a".ord-1)).chr
+			
+		else
+			
+			(text_char.ord+cesar_key).chr
+		end
+			
+	
+elsif text_char.between?("A","Z") 
+
+		if (text_char.ord+cesar_key).chr > "Z"
+			
+			(text_char.ord+cesar_key-"Z".ord+("A".ord-1)).chr
+			
+		else
+			
+			(text_char.ord+cesar_key).chr
+		end
+	
+else
+	
+	text_char
+	
+end
+	
 	
 end
