@@ -40,3 +40,7 @@ end
 	
 	
 end
+
+caeser_text = letters.join
+puts "Caeser skrypt of your text:"
+puts caeser_text
