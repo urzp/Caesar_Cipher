@@ -5,3 +5,11 @@ puts "Put your Caesar key below:"
 cesar_key=gets.chomp.to_i
 
 letters=text.split("")  # заливаем arr символами
+
+
+letters.each do |c| 
+	
+#puts c if c.ord.between?(97,122)
+puts c if c.ord.between?(65,90)
+	
+end
