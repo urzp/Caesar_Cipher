@@ -42,4 +42,29 @@ describe "#caesar_cipher" do
 
   end
 
+  context "try to use diffrent keys from 0 to 5 " do
+
+  0.upto(5) do |i|
+    it "When we input word \"Test\" and key #{i}" do
+      out = "Test" if i == 0
+      out = "Uftu" if i == 1
+      out = "Vguv" if i == 2
+      out = "Whvw" if i == 3
+      out = "Xiwx" if i == 4
+      out = "Yjxy" if i == 5
+      expect( caesar_cipher("Test", i) ).to eq out
+    end
+  end
+
+end
+
+  context "check if it's used with diffrent keys 0 to 100 " do
+
+      0.upto(100) do |i|
+        it "When we input word \"Test\" and key #{i} to expect a string" do
+            expect( caesar_cipher("Test", i) ).to be_kind_of String
+        end
+      end
+
+  end
 end
